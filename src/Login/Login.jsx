@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router";
 
 const Login = () => {
   let [user, setUser] = useState({
@@ -12,14 +13,17 @@ const Login = () => {
   };
   let submitHandler = (event) => {
     event.preventDefault();
-    localStorage.setItem("username",` ${user.username}`);
-
+    localStorage.setItem("username", ` ${user.username}`);
+    // if (localStorage.getItem("username")) {
+    //   <Redirect to="/contact" />
+    //   console.log("njdskn")
+    // }
   };
   let checkHandler = (event) => {
     if (event.target.checked) {
       setCheck(!check);
     } else {
-      setCheck(!check);
+      setCheck(true);
     }
   };
   return (

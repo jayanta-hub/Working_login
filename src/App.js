@@ -11,12 +11,13 @@ import Dashbord from "./page/Dashbord/Dashbord";
 function App() {
   return (
     <>
+    
           {/* <Login/> */}
       <Router>
         <Navbar />
         {/* <Dashbord /> */}
         <Switch>
-          {/* <Route exatc path="/" component={Dashbord} /> */}
+          <Route exatc path="/" component={Dashbord} />
           <Route exatc path="/home" component={Home} />
           <Route exatc path="/aboutus" component={Aboutus} />
           <Route exatc path="/contact" component={Contact} />
